@@ -94,9 +94,11 @@ else:
 
     if user_input:
         # Create a chat session with the model and include system instruction in history
-        chat_session = model.start_chat(history=[
-            {"role": "system", "content": system_instruction}
-        ])
+        chat_session = model.start_chat(
+            history=[
+                {"role": "system", "content": {"parts": [system_instruction]}}
+            ]
+        )
 
         # Send the message and get the response
         response = chat_session.send_message(user_input)
