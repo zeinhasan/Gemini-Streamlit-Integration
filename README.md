@@ -1,4 +1,4 @@
-# Chatbot with Gemini Models
+# Gemini Streamlit Integration
 
 This project is a Streamlit-based chatbot application utilizing various Gemini models for natural language processing. Users can switch between light and dark modes and configure model settings to customize their interactions.
 
@@ -15,7 +15,7 @@ This project is a Streamlit-based chatbot application utilizing various Gemini m
 To get started, clone the repository and install the required packages:
 
 ```bash
-git clone https://github.com/OrenGrinker/geminiChatBot.git
+git clone [https://github.com/OrenGrinker/geminiChatBot.git](https://github.com/zeinhasan/Gemini-Streamlit-Integration)
 cd geminiChatBot
 pip install -r requirements.txt
 ```
