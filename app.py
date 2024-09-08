@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 from config import Config
 from utils import apply_css, initialize_session, get_model_name, create_chat_session
 
@@ -24,7 +25,8 @@ def main():
 
     st.title("Chatbot with Gemini Models")
 
-    api_key = st.text_input("Enter your Gemini API key:", type="password")
+    # Retrieve API key from environment variable
+    api_key = os.getenv("GEMINI_API_KEY")
     if api_key:
         model_name = get_model_name(model_choice)
         chat_session = create_chat_session(api_key, model_name, temperature, top_p, top_k, max_output_tokens)
@@ -55,6 +57,8 @@ def main():
                             <div class="chat-bubble ai">{entry[1]} <br><small>{entry[2]}</small></div>
                         </div>
                     """, unsafe_allow_html=True)
+    else:
+        st.error("API key not found. Please set the 'GEMINI_API_KEY' environment variable.")
 
 if __name__ == "__main__":
     main()
