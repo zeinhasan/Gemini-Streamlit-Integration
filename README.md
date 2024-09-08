@@ -15,7 +15,7 @@ This project is a Streamlit-based chatbot application utilizing various Gemini m
 To get started, clone the repository and install the required packages:
 
 ```bash
-git clone [https://github.com/OrenGrinker/geminiChatBot.git](https://github.com/zeinhasan/Gemini-Streamlit-Integration)
+git clone https://github.com/zeinhasan/Gemini-Streamlit-Integration
 cd geminiChatBot
 pip install -r requirements.txt
 ```
