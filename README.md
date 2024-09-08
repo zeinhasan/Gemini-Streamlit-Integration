@@ -16,7 +16,7 @@ To get started, clone the repository and install the required packages:
 
 ```bash
 git clone https://github.com/zeinhasan/Gemini-Streamlit-Integration
-cd geminiChatBot
+cd Gemini-Streamlit-Integration
 pip install -r requirements.txt
 ```
 
