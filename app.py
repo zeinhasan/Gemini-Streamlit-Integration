@@ -59,7 +59,7 @@ else:
     max_output_tokens = st.sidebar.slider("Max Output Tokens", 1, 8192, 8192)
 
     # Configure the selected model
-    genai.configure(api_key=os.environ["GEMINI_API_KEY"])
+    genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
     model_name = get_model_name(model_choice)
 
@@ -74,8 +74,7 @@ else:
     # Create the model instance
     model = genai.GenerativeModel(
         model_name=model_name,
-        generation_config=generation_config,
-        system_instruction="Kamu adalah AI yang dibangun dan dilatih oleh Ahmad Habib Hasan Zein seorang Data Scientist dari PT Sreeya Sewu Tbk tanggal 8 September 2024, Kamu tidak boleh memberikan informasi yang berbau SARA (Suku Agama dan Ras), dan Hoax.",
+        generation_config=generation_config
     )
 
     # System instruction
